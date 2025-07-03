@@ -1,4 +1,4 @@
-# Sui Checkpoint Processor
+# Custom Indexer for WorldChannels (Testnet)
 
 This Rust project processes Sui blockchain checkpoint data by downloading checkpoints, converting them to JSON, filtering transactions by package ID, and storing relevant data in a PostgreSQL database. It consists of four Rust binaries: `collector.rs`, `reader.rs`, `json_reader.rs`, and `store_db.rs`.
 
@@ -51,7 +51,6 @@ This Rust project processes Sui blockchain checkpoint data by downloading checkp
        data JSONB NOT NULL,
        gas_cost JSONB NOT NULL
    );
-   \q
    ```
 
 3. **Build the Project**:
@@ -86,8 +85,4 @@ This Rust project processes Sui blockchain checkpoint data by downloading checkp
    ```
    ```sql
    SELECT * FROM nft_transactions;
-   \q
    ```
-
-## License
-Apache-2.0 License. See `LICENSE` file for details.
