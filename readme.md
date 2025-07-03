@@ -29,7 +29,7 @@ This Rust project processes Sui blockchain checkpoint data by downloading checkp
 ### Setup
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ArifulIslam99/custom-checkpoint.git
    cd custom-checkpoint
    ```
 
