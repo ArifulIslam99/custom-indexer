@@ -1,0 +1,33 @@
+[package]
+name = "checkpoint-downloader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+async-trait = "0.1.83"
+sui_data_ingestion_core = { git = "https://github.com/MystenLabs/sui", package = "sui-data-ingestion-core" }
+sui_types = { git = "https://github.com/MystenLabs/sui", package = "sui-types" }
+tokio = { version = "1.38.0", features = ["full"] }
+bcs = "0.1"
+tracing = "0.1"
+hex = "0.4.3"
+serde_json = "1.0"  # Added for JSON output
+serde = { version = "1.0", features = ["derive"] }
+tokio-postgres = { version = "0.7.10", features = ["with-serde_json-1"] }
+
+[[bin]]
+name = "checkpoint-downloader"
+path = "src/collector.rs"
+
+[[bin]]
+name = "checkpoint-reader"
+path = "src/reader.rs"
+
+[[bin]]
+name = "json-reader"
+path = "src/json_reader.rs"
+
+[[bin]]
+name = "store-db"
+path = "src/store_db.rs"
